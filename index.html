@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <title>Interactive Card Preview</title>
+    <script src="main.js" defer></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');</style>
+</head>
+<body>
+
+    <div class="bg">
+    </div>
+
+    <div class="container">
+
+        <div class="getInfoCard">
+
+        <div class="cards-section">
+            <img class="back-card" src="images/bg-card-back.png" alt="Back-sided card">
+            <p class="card-ccv-text">000</p>
+            <div class="front-card-container">
+                <img class="front-card" src="images/bg-card-front.png" alt="Front-sided card">
+                <img class="front-card-logo" src="images/card-logo.svg" alt="Card logo">
+
+                <h1 class="card-number-text">0000 0000 0000 0000</h1>
+                <div class="card-info-container">
+                    <p class="card-name-text">martí paredes salom</p>
+                    <p class="card-exp-text">00/00</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-section">
+            <form class="information-form" onsubmit="return false">
+                <div class="one-input">
+                    <label for="cardHolder">CARDHOLDER NAME</label>
+                    <input type="text" name="cardHolder" id="cardHolder" placeholder="e.g. Jane Appleseed" pattern="[a-zA-Z\s]+"
+                    title="Enter only letters in the name field.">
+                </div>
+                <div class="one-input">
+                    <label for="cardNumber">CARD NUMBER</label>
+                    <input type="text" name="cardNumber" id="cardNumber" placeholder="e.g. 1234 5678 9123 4567" pattern="[0-9]{16}">
+                </div>
+                <div class="two-inputs-container">
+                    <div class="one-input">
+                        <label for="expDateMM">EXP.DATE (MM/YY)</label>
+
+                        <div class="one-input horiz">
+
+                            <input type="text" name="expDateMM" id="expDateMM" placeholder="e.g. 19" pattern="[0-9]{1,2}">
+                            <input type="text" name="expDateYY" id="expDateYY" placeholder="e.g. 03" pattern="[0-9]{1,2}">
+                        </div>
+                    </div>
+
+                    <div class="one-input">
+                        <label for="cardCCV">CCV</label>
+                        <input type="text" name="cardCCV" id="cardCCV" placeholder="e.g. 123" pattern="[0-9]{3}">
+                    </div>
+                </div>
+                <input type="submit" value="Confirm" class="submit-button">
+            </form>
+        </div>
+        </div>
+
+
+        <div class="showSuccess">
+
+            <span class="tick-img"></span>
+            <h1 class="thank-you">THANK YOU!</h1>
+            <p>We've added your card details</p>
+
+            <button class="submit-button" id="thanksButton">Continue</button>
+
+        </div>
+    </div>
+</body>
+</html>

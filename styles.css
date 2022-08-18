@@ -1,0 +1,239 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --gradient-color-1: hsl(249, 99%, 64%);
+    --gradient-color-2: hsl(278, 94%, 30%);
+
+    --error-color: hsl(0, 100%, 66%);
+    
+    --neutral-color-white: hsl(0, 0%, 100%);
+    --neutral-color-lightViolet: hsl(270, 3%, 87%);
+    --neutral-color-darkViolet: hsl(279, 6%, 55%);
+    --neutral-color-veryDarkViolet: hsl(278, 68%, 11%);
+
+    --font-family: 'Space Grotesk', sans-serif ;
+}
+
+html {
+    font-family: var(--font-family);   
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+.bg {
+    position: absolute;
+
+    height: 40%;
+    width: 100%;
+
+    background: url("images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -10;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 2em;
+
+    height: 100vh;
+    width: 100%;
+}
+
+.cards-section {
+    position: static;
+    color: var(--neutral-color-white);    
+    user-select: none;
+
+    transform: scale(0.65, 0.65);
+
+    margin-top: -6.5em;
+    margin-bottom: -11em;
+
+    height: 40em;
+}
+
+
+
+.cards-section > * {
+    position: relative;
+}
+
+.back-card {
+    right: -2.5em;
+    z-index: -1;
+}
+
+.card-ccv-text {
+    position: relative;
+
+    top: -8.75em;
+    right: 7.25em;
+
+    text-align: right;
+}
+
+.front-card-container {
+    left: -2.5em;
+    top: -8.25em;
+}
+
+.front-card-container > * {
+    position: relative;
+}
+
+.front-card-logo {
+    left: -27em;
+    top: -11em;
+}
+
+
+.card-number-text {
+    position: relative;
+    font-weight: normal;
+    letter-spacing: .05em;
+    top: -3.5em;
+    left: 1.2em;
+    font-variant-numeric: tabular-nums;
+}
+
+.card-info-container {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5em;
+
+    position: relative;
+    top: -5.5em;
+    left: -3em;
+}
+
+.card-name-text {
+    text-transform: uppercase;
+}
+
+.form-section {
+    color: var(--neutral-color-veryDarkViolet);
+    letter-spacing: 0.15rem;
+    font-weight: 500;
+    width: 100%;
+}
+
+.information-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.one-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+    padding-bottom: 1em;
+    z-index: 10000;
+}
+
+.one-input > input {
+    border: 1px solid var(--neutral-color-lightViolet);
+    border-radius: .5em;
+    height: 3.5em;
+    color: var(--neutral-color-darkViolet);
+    padding-left: 1rem;
+}
+
+.one-input input::placeholder {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    color: var(--neutral-color-lightViolet);
+}
+
+.one-input input:focus {
+    outline: none;
+    border: 2px solid var(--gradient-color-1);
+}
+
+.two-inputs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    gap: 0.5em;
+    justify-content: center;
+}
+
+.submit-button {
+    font-family: var(--font-family);
+    cursor: pointer;
+
+    font-size: 1em;
+    border-radius: 0.5em;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    border: none;
+
+    width: 100%;
+
+    background: var(--neutral-color-veryDarkViolet);
+    color: var(--neutral-color-white);
+    margin-bottom: 2em;
+
+    padding-block: 1em;
+
+    transition: background 200ms linear;
+}
+
+.submit-button:hover {
+    background: var(--gradient-color-2);
+}
+
+.one-input.horiz {
+    flex-direction: row;
+    flex-basis: 100%;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+.showSuccess {
+    height: 100%;
+    width: 70%;
+
+    display: none;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-around;
+
+    gap: 1.5em;
+}
+
+.tick-img {
+    background: url("images/icon-complete.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 1;
+    width: 4em;
+}
+
+.thank-you {
+    font-weight: 500;
+    color: var(--neutral-color-veryDarkViolet);
+}
+
+.showSuccess p {
+    color: var(--neutral-color-darkViolet);
+}
+
+.form-section {
+    display: block;
+}
