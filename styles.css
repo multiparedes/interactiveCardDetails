@@ -126,14 +126,11 @@ body {
     letter-spacing: 0.15rem;
     font-weight: 500;
     width: 100%;
-    
 }
 
 .information-form {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    flex-wrap: wrap;
 }
 
 .one-input {
@@ -150,6 +147,8 @@ body {
     height: 3.5em;
     color: var(--neutral-color-darkViolet);
     padding-left: 1rem;
+
+    
 }
 
 .one-input input::placeholder {
