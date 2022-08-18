@@ -36,13 +36,14 @@ body {
     background: url("images/bg-main-desktop.png");
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: -10;
+    z-index: -1000;
 }
 
 .container {
     display: flex;
     flex-flow: column;
     align-items: center;
+
     padding: 2em;
 
     height: 100vh;
@@ -59,7 +60,7 @@ body {
     margin-top: -6.5em;
     margin-bottom: -11em;
 
-    height: 40em;
+    height: 35em;
 }
 
 
@@ -125,6 +126,7 @@ body {
     letter-spacing: 0.15rem;
     font-weight: 500;
     width: 100%;
+    
 }
 
 .information-form {
@@ -161,13 +163,12 @@ body {
 }
 
 .two-inputs-container {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
     flex-direction: row;
     gap: 0.5em;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .submit-button {
@@ -197,7 +198,7 @@ body {
 
 .one-input.horiz {
     flex-direction: row;
-    flex-basis: 100%;
+    width: 100%;
 }
 
 input:invalid {
@@ -236,4 +237,96 @@ input:invalid {
 
 .form-section {
     display: block;
+}
+
+@media only screen and (max-width: 38.5em) {
+    .front-card-logo {
+        left: 2em;
+        top: -13em;
+    }
+
+    .card-number-text {
+        top: -5.5em;
+    }
+
+    .card-info-container {
+        top: -9em;
+        width: 33em;
+        justify-content: space-between;
+    }
+
+    .card-ccv-text {
+        top: -8.75em;
+        right: 6em;
+    }
+
+
+}
+
+/* DESKTOP VIEW MODE */
+@media only screen and (min-width: 45em) {
+
+    body {
+        height: 100%;
+        width: 100%;
+    }
+
+    .bg {
+        height: 100%;
+        width: 30%;
+        left: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+
+    .getInfoCard {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+
+        padding-inline: 2em;
+    }
+
+    .cards-section > * {
+        position: relative;
+    }
+
+    .cards-section {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+    .front-card-container {
+        top: 5em;  
+    }
+
+    .front-card-logo {
+        left: 2em;
+        top: -13em;
+    }
+
+    .card-number-text {
+        top: -5.5em;
+    }
+
+    .card-info-container {
+        top: -9em;
+        width: 33em;
+        justify-content: space-between;
+    }
+
+    .card-ccv-text {
+        top: 9.5em;
+        right: 2em;
+    }
+
+
+    .showSuccess {
+        padding-top: 5em;
+    }
 }
